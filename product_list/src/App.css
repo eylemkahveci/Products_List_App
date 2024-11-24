@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Carousel to  move with side arrows as well as swiping  */
+.carousel-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+  padding-left: 50px;
+  position: relative;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-right: 50px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #828282;
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #818181;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #c8c7c7;
+}
+
+.carousel-item {
+  flex: 0 0 calc(25% - 16px);
+  margin: 3px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.arrow {
+  font-size: 250%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(43, 43, 43);
+  border: none;
+  border-radius: 80%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/*fonts*/
+@font-face {
+  font-family: "Avenir Book";
+  src: url('fonts/Avenir/Avenir-Book.ttf') format('woff2'),
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('woff2'),
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url('fonts/Montserrat/Montserrat-Medium.otf') format('woff2'),
+}
+
+/*styles for titles*/
+h1 {
+  font-family: "Avenir Book", sans-serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: normal; 
+}
+
+h2 {
+  font-family: 'Montserrat Medium, sans-serif';
+  font-size: '15px';
+  font-weight: normal,
+}
